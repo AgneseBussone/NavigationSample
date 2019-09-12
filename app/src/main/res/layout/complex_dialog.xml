@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="In this dialog there are input text fields, images and a button that opens another fragment"/>
+    <Button
+        android:id="@+id/openDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="open fragment"
+        android:layout_margin="5dp"/>
+
+</LinearLayout>

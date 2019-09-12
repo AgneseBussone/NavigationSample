@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.navigationsample.FirstFragment"
+        tools:layout="@layout/first_fragment">
+        <action
+            android:id="@+id/action_firstFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.navigationsample.SecondFragment"
+        tools:layout="@layout/second_fragment">
+        <action
+            android:id="@+id/action_secondFragment_to_simpleDialog"
+            app:destination="@id/simpleDialog" />
+        <action
+            android:id="@+id/action_secondFragment_to_complexDialog"
+            app:destination="@id/complexDialog" />
+    </fragment>
+    <dialog
+        android:id="@+id/simpleDialog"
+        android:name="com.example.navigationsample.SimpleDialog" />
+    <dialog
+        android:id="@+id/complexDialog"
+        android:name="com.example.navigationsample.ComplexDialog">
+        <action
+            android:id="@+id/action_complexDialog_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.navigationsample.DetailsFragment"
+        tools:layout="@layout/details_fragment" />
+</navigation>
